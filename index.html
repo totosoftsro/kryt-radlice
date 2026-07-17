@@ -4,26 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kryt Radlice — Výstava v aktivním krytu civilní ochrany</title>
-  <meta name="description" content="Studentský projekt zpřístupňující veřejnosti aktivní kryt civilní ochrany v Praze 5 – Jinonicích. Prohlídky zdarma, výstava dozimetrů, ochranných obleků a polních telefonů.">
+  <meta name="description" content="Studentský projekt SSPŠ zpřístupňuje veřejnosti aktivní kryt civilní ochrany v Praze 5 – Jinonicích. Prohlídky zdarma, výstava předmětů ochrany obyvatelstva.">
   <meta name="theme-color" content="#0D0F26">
   <link rel="canonical" href="https://totosoftsro.github.io/kryt-radlice/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Kryt Radlice">
   <meta property="og:url" content="https://totosoftsro.github.io/kryt-radlice/">
   <meta property="og:title" content="Kryt Radlice — Výstava v aktivním krytu civilní ochrany">
   <meta property="og:description" content="Sestupte do skutečného krytu civilní ochrany. Prohlídky zdarma, výstava předmětů ochrany obyvatelstva. Praha 5 – Jinonice.">
   <meta property="og:image" content="https://totosoftsro.github.io/kryt-radlice/img/background.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="Otevřený tlakový uzávěr krytu Radlice">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="img/small_logo.png">
+  <link rel="icon" href="img/small_logo.png" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" href="fonts/TTPolls_Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/TTPolls_Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/MonaSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MonaSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="img/background.webp"
         imagesrcset="img/background-800.webp 800w, img/background.webp 1600w"
-        imagesizes="(max-width: 980px) 92vw, 44vw">
+        imagesizes="(max-width: 980px) 92vw, min(44vw, 515px)">
   <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
   {
@@ -31,10 +38,20 @@
     "@type": "ExhibitionEvent",
     "name": "Výstava Kryt Radlice",
     "description": "Studentský projekt zpřístupňující veřejnosti aktivní kryt civilní ochrany po technické stránce.",
+    "image": "https://totosoftsro.github.io/kryt-radlice/img/background.jpg",
     "startDate": "2026-06-18T10:00:00+02:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "isAccessibleForFree": true,
+    "inLanguage": "cs",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CZK",
+      "availability": "https://schema.org/InStock",
+      "url": "https://totosoftsro.github.io/kryt-radlice/",
+      "validFrom": "2026-06-01"
+    },
     "location": {
       "@type": "Place",
       "name": "Areál SSPŠ a G Jinonice",
@@ -48,7 +65,7 @@
     },
     "organizer": {
       "@type": "EducationalOrganization",
-      "name": "Smíchovská střední průmyslová škola a gymnázium",
+      "name": "Smíchovská střední průmyslová škola, gymnázium a Hotelová škola Radlická, příspěvková organizace",
       "url": "https://ssps.cz/"
     },
     "url": "https://totosoftsro.github.io/kryt-radlice/"
@@ -66,13 +83,13 @@
         <span class="nav__name">Kryt Radlice</span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Hlavní navigace">
-        <a href="#o-projektu">O projektu</a>
+        <a href="#o-projektu">O&nbsp;projektu</a>
         <a href="#fotogalerie">Fotogalerie</a>
         <a href="#prohlidky">Prohlídky</a>
         <a href="#kontakty">Kontakty</a>
         <a href="#rezervace" class="btn btn--primary nav__cta">Rezervace</a>
       </nav>
-      <button class="nav__burger" id="navBurger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navLinks">
+      <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -83,32 +100,32 @@
     <section class="hero" id="uvod">
       <div class="container hero__grid">
         <div class="hero__text">
-          <p class="eyebrow">Studentský projekt SSPŠ a G</p>
+          <p class="eyebrow">Studentský projekt SSPŠ a&nbsp;G</p>
           <h1>Sestupte do skutečného krytu civilní ochrany</h1>
           <p class="hero__lead">
             Výstava Kryt Radlice přibližuje veřejnosti fungování aktivního
-            krytu po technické stránce — filtroventilaci, tlakové uzávěry,
-            záložní zdroje i sbírku předmětů ochrany obyvatelstva.
+            krytu po technické stránce – filtroventilaci, tlakové uzávěry,
+            záložní zdroje i&nbsp;sbírku předmětů ochrany obyvatelstva.
           </p>
           <div class="hero__actions">
             <a href="#rezervace" class="btn btn--primary">Rezervovat prohlídku</a>
-            <a href="#o-projektu" class="link-arrow">Více o projektu</a>
+            <a href="#o-projektu" class="link-arrow">Více o&nbsp;projektu</a>
           </div>
         </div>
         <div class="hero__media">
           <img src="img/background.webp"
                srcset="img/background-800.webp 800w, img/background.webp 1600w"
-               sizes="(max-width: 980px) 92vw, 44vw"
+               sizes="(max-width: 980px) 92vw, min(44vw, 515px)"
                alt="Otevřený tlakový uzávěr krytu Radlice"
                width="1600" height="900" fetchpriority="high">
         </div>
       </div>
       <div class="container">
         <ul class="facts">
-          <li><strong>0 Kč</strong><span>vstup zdarma</span></li>
-          <li><strong>1 hodina</strong><span>délka prohlídky</span></li>
-          <li><strong>5 metrů</strong><span>pod povrchem</span></li>
-          <li><strong>17 °C</strong><span>stálá teplota</span></li>
+          <li><strong>0&nbsp;Kč</strong><span>vstup zdarma</span></li>
+          <li><strong>1&nbsp;hodina</strong><span>délka prohlídky</span></li>
+          <li><strong>5&nbsp;metrů</strong><span>pod povrchem</span></li>
+          <li><strong>17&nbsp;°C</strong><span>stálá teplota</span></li>
         </ul>
       </div>
     </section>
@@ -118,16 +135,16 @@
       <div class="container notice__grid">
         <div>
           <p class="eyebrow eyebrow--gold">Aktuálně</p>
-          <h2 id="aktualne-titulek">Slavnostní otevření<br>18. 6. 2026 od 10:00</h2>
+          <h2 id="aktualne-titulek">Slavnostní otevření 18.&nbsp;6.&nbsp;2026 od&nbsp;10:00</h2>
         </div>
         <div class="notice__text">
           <p>
-            Společné otevření Krytu Radlice a výstavy modelu Osvětimi od dalších
-            studentů naší školy. Registrace není nutná — stačí přijít. Těšíme se na vás!
+            Společné otevření Krytu Radlice a&nbsp;výstavy modelu Osvětimi od dalších
+            studentů naší školy. Registrace není nutná – stačí přijít. Těšíme se na vás!
           </p>
           <p class="notice__address">
-            Radlická 591/115, 158 00 Praha 5 – Jinonice<br>
-            <span>Z vrátnice trefíte podle připravených šipek.</span>
+            Radlická 591/115, 158&nbsp;00 Praha&nbsp;5 – Jinonice<br>
+            <span>Od vrátnice vás povedou připravené šipky.</span>
           </p>
         </div>
       </div>
@@ -137,43 +154,43 @@
     <section class="section" id="o-projektu" aria-labelledby="o-projektu-titulek">
       <div class="container section__grid">
         <div class="section__label">
-          <h2 id="o-projektu-titulek">O projektu</h2>
+          <h2 id="o-projektu-titulek">O&nbsp;projektu</h2>
         </div>
         <div class="section__body">
           <p class="lede">
             Výstava Kryt Radlice je studentský projekt, který veřejnosti
-            přibližuje fungování aktivního krytu civilní ochrany —
+            přibližuje fungování aktivního krytu civilní ochrany –
             zejména po technické stránce.
           </p>
           <p>
-            Součástí prohlídky je i výstava předmětů spojených s ochranou
-            obyvatelstva: dozimetry, ochranné obleky, polní telefony a další
+            Součástí prohlídky je i&nbsp;výstava předmětů spojených s&nbsp;ochranou
+            obyvatelstva: dozimetry, ochranné obleky, polní telefony a&nbsp;další
             vybavení, které kdysi patřilo ke každodenní přípravě na krizové situace.
           </p>
           <p>
-            Unikátním prvkem krytu bude vlastní digitální řídicí a monitorovací
-            systém, který aktuálně navrhujeme. V blízké době začneme s instalací
-            vlastních kabelů, čidel, rozvaděčů a dalších prvků.
+            Unikátním prvkem krytu bude vlastní digitální řídicí a&nbsp;monitorovací
+            systém, který aktuálně navrhujeme. V&nbsp;blízké době začneme s&nbsp;instalací
+            vlastních kabelů, čidel, rozvaděčů a&nbsp;dalších prvků.
           </p>
           <ul class="feature-list">
             <li>
-              <h3>Technika v provozu</h3>
-              <p>Filtroventilace, tlakové uzávěry i záložní generátor s alternátorem — vše zblízka a s výkladem.</p>
+              <h3>Technika v&nbsp;provozu</h3>
+              <p>Filtroventilace, tlakové uzávěry i&nbsp;záložní generátor s&nbsp;alternátorem – vše zblízka a&nbsp;s&nbsp;výkladem.</p>
             </li>
             <li>
               <h3>Výstava exponátů</h3>
-              <p>Dozimetry, ochranné obleky, polní telefony a další předměty ochrany obyvatelstva.</p>
+              <p>Dozimetry, ochranné obleky, polní telefony a&nbsp;další předměty ochrany obyvatelstva.</p>
             </li>
             <li>
               <h3>Vlastní monitoring</h3>
-              <p>Digitální řídicí systém krytu — čidla, rozvaděče a kabeláž instalují sami studenti.</p>
+              <p>Digitální řídicí systém krytu – čidla, rozvaděče a&nbsp;kabeláž instalují sami studenti.</p>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- FOTOGALERIE -->
+    <!-- FOTOGALERIE (mozaika v CSS je šitá přesně na 12 fotek — při změně počtu uprav vzorec nth-child v .gallery) -->
     <section class="section section--tinted" id="fotogalerie" aria-labelledby="fotogalerie-titulek">
       <div class="container">
         <div class="section__head">
@@ -181,18 +198,18 @@
           <p>Kliknutím na fotografii ji zvětšíte.</p>
         </div>
         <div class="gallery">
-          <figure><img src="img/gallery/thumbs/img1.webp" data-full="img/gallery/img1.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img2.webp" data-full="img/gallery/img2.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Záložní generátor s alternátorem</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img3.webp" data-full="img/gallery/img3.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Filtry vzduchotechniky</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img4.webp" data-full="img/gallery/img4.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Rozvaděč</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img5.webp" data-full="img/gallery/img5.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Kohoutky na užitkovou vodu</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img6.webp" data-full="img/gallery/img6.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Technická místnost</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img7.webp" data-full="img/gallery/img7.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Záchody</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img8.webp" data-full="img/gallery/img8.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img9.webp" data-full="img/gallery/img9.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Komunikační zařízení</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img10.webp" data-full="img/gallery/img10.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img11.webp" data-full="img/gallery/img11.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Chodba</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img12.webp" data-full="img/gallery/img12.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Chodba nouzového východu</figcaption></figure>
+          <figure><a href="img/gallery/img1.webp" aria-label="Zvětšit fotografii 1 z 12: Tlakový uzávěr"><img src="img/gallery/thumbs/img1.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Tlakový uzávěr</figcaption></figure>
+          <figure><a href="img/gallery/img2.webp" aria-label="Zvětšit fotografii 2 z 12: Záložní generátor s alternátorem"><img src="img/gallery/thumbs/img2.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Záložní generátor s&nbsp;alternátorem</figcaption></figure>
+          <figure><a href="img/gallery/img3.webp" aria-label="Zvětšit fotografii 3 z 12: Filtry vzduchotechniky"><img src="img/gallery/thumbs/img3.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Filtry vzduchotechniky</figcaption></figure>
+          <figure><a href="img/gallery/img4.webp" aria-label="Zvětšit fotografii 4 z 12: Rozvaděč"><img src="img/gallery/thumbs/img4.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Rozvaděč</figcaption></figure>
+          <figure><a href="img/gallery/img5.webp" aria-label="Zvětšit fotografii 5 z 12: Kohoutky na užitkovou vodu"><img src="img/gallery/thumbs/img5.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Kohoutky na užitkovou vodu</figcaption></figure>
+          <figure><a href="img/gallery/img6.webp" aria-label="Zvětšit fotografii 6 z 12: Technická místnost"><img src="img/gallery/thumbs/img6.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Technická místnost</figcaption></figure>
+          <figure><a href="img/gallery/img7.webp" aria-label="Zvětšit fotografii 7 z 12: Záchody"><img src="img/gallery/thumbs/img7.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Záchody</figcaption></figure>
+          <figure><a href="img/gallery/img8.webp" aria-label="Zvětšit fotografii 8 z 12: Tlakový uzávěr"><img src="img/gallery/thumbs/img8.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Tlakový uzávěr</figcaption></figure>
+          <figure><a href="img/gallery/img9.webp" aria-label="Zvětšit fotografii 9 z 12: Komunikační zařízení"><img src="img/gallery/thumbs/img9.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Komunikační zařízení</figcaption></figure>
+          <figure><a href="img/gallery/img10.webp" aria-label="Zvětšit fotografii 10 z 12: Tlakový uzávěr"><img src="img/gallery/thumbs/img10.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Tlakový uzávěr</figcaption></figure>
+          <figure><a href="img/gallery/img11.webp" aria-label="Zvětšit fotografii 11 z 12: Chodba"><img src="img/gallery/thumbs/img11.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Chodba</figcaption></figure>
+          <figure><a href="img/gallery/img12.webp" aria-label="Zvětšit fotografii 12 z 12: Chodba nouzového východu"><img src="img/gallery/thumbs/img12.webp" alt="" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>Chodba nouzového východu</figcaption></figure>
         </div>
       </div>
     </section>
@@ -205,41 +222,41 @@
         </div>
         <div class="section__body">
           <p class="lede">
-            Prohlídky probíhají v předem stanovených termínech — zpravidla
-            v pátek, o víkendu nebo o státním svátku.
+            Prohlídky probíhají v&nbsp;předem stanovených termínech – zpravidla
+            v&nbsp;pátek, o&nbsp;víkendu nebo o&nbsp;státním svátku.
           </p>
           <p>
-            Na konkrétní termín je nutné se přihlásit formulářem v sekci
+            Na konkrétní termín je nutné se přihlásit formulářem v&nbsp;sekci
             <a href="#rezervace">rezervace</a>. Vstup je zdarma, na místě je
             možné přispět na údržbu krytu. Během prohlídky si projdete téměř
-            veškeré prostory — místnosti pro ukrývané, technické zázemí
-            i výstavu — a průvodce vám vysvětlí fungování jednotlivých zařízení.
+            veškeré prostory – místnosti pro ukrývané, technické zázemí
+            i&nbsp;výstavu – a&nbsp;průvodce vám vysvětlí fungování jednotlivých zařízení.
           </p>
 
           <dl class="info-list">
             <div>
               <dt>Sraz</dt>
-              <dd>Na vrátnici školy, Radlická 591/115, 158 00 Praha 5 – Jinonice</dd>
+              <dd>Na vrátnici školy, Radlická 591/115, 158&nbsp;00 Praha&nbsp;5 – Jinonice</dd>
             </div>
             <div>
               <dt>Délka</dt>
-              <dd>Přibližně 1 hodina, komentovaná prohlídka s průvodcem</dd>
+              <dd>Přibližně 1&nbsp;hodina, komentovaná prohlídka s&nbsp;průvodcem</dd>
             </div>
             <div>
               <dt>Teplota</dt>
-              <dd>V krytu je stálých 17 °C — zvažte vrstvu oblečení navíc</dd>
+              <dd>V&nbsp;krytu je stálých 17&nbsp;°C – zvažte vrstvu oblečení navíc</dd>
             </div>
             <div>
               <dt>Zázemí</dt>
-              <dd>WC je k dispozici před prohlídkou i po ní</dd>
+              <dd>WC je k&nbsp;dispozici před prohlídkou i&nbsp;po ní</dd>
             </div>
             <div>
               <dt>Přístupnost</dt>
-              <dd>Do podzemí se schází po schodech (asi 5 m) — bohužel nevhodné pro vozíčkáře a kočárky</dd>
+              <dd>Do podzemí se schází po schodech (asi 5&nbsp;m) – bohužel nevhodné pro vozíčkáře a&nbsp;rodiče s&nbsp;kočárky</dd>
             </div>
             <div>
               <dt>Pravidla</dt>
-              <dd>V celém areálu a během prohlídky platí <a href="docs/navstevni_rad_krytu_radlice.pdf" target="_blank" rel="noopener">návštěvnický řád (PDF)</a></dd>
+              <dd>V&nbsp;celém areálu a&nbsp;během prohlídky platí <a href="docs/navstevni_rad_krytu_radlice.pdf" target="_blank" rel="noopener">návštěvnický řád (PDF)<span class="sr-only"> (otevře se v&nbsp;novém okně)</span></a></dd>
             </div>
           </dl>
         </div>
@@ -258,7 +275,7 @@
             <p class="lede">Spustíme ho po slavnostním otevření výstavy.</p>
             <p>
               Do té doby nás můžete navštívit na slavnostním otevření
-              <strong>18. 6. 2026 od 10:00</strong> — bez registrace.
+              <strong>18.&nbsp;6.&nbsp;2026 od&nbsp;10:00</strong> – bez registrace.
               Máte-li jakékoli dotazy či potíže, napište nám.
             </p>
             <a href="mailto:ruzicka.ma.2025@ssps.cz" class="btn btn--primary">Napsat na ruzicka.ma.2025@ssps.cz</a>
@@ -276,7 +293,7 @@
         <div class="contacts">
           <div>
             <h3>Tým projektu</h3>
-            <p>Vedoucí týmu<br><a href="https://matejruzicka.cz/" target="_blank" rel="noopener">Matěj Růžička</a></p>
+            <p>Vedoucí týmu<br><a href="https://matejruzicka.cz/" target="_blank" rel="noopener">Matěj Růžička<span class="sr-only"> (otevře se v&nbsp;novém okně)</span></a></p>
             <p>Členové týmu<br>Alexandr Svoboda, Daniel Tůma, Václav Šprincl, Adam Hněvkovský, Petr Jakl</p>
             <p>E-mail<br><a href="mailto:ruzicka.ma.2025@ssps.cz">ruzicka.ma.2025@ssps.cz</a></p>
           </div>
@@ -284,14 +301,14 @@
             <h3>Škola</h3>
             <p>
               Projekt studentů Smíchovské střední průmyslové školy, gymnázia
-              a Hotelové školy Radlická, příspěvková organizace.
+              a&nbsp;Hotelové školy Radlická, příspěvkové organizace.
             </p>
-            <p><a href="https://ssps.cz/" target="_blank" rel="noopener">ssps.cz</a></p>
+            <p><a href="https://ssps.cz/" target="_blank" rel="noopener">ssps.cz<span class="sr-only"> (otevře se v&nbsp;novém okně)</span></a></p>
           </div>
           <div>
             <h3>Kde nás najdete</h3>
-            <p>Areál s krytem (Jinonice)<br>Radlická 591/115<br>158 00 Praha 5 – Jinonice</p>
-            <p>Areál školy (Smíchov)<br>Preslova 72/25<br>150 00 Praha 5 – Smíchov</p>
+            <p>Areál s&nbsp;krytem (Jinonice)<br>Radlická 591/115<br>158&nbsp;00 Praha&nbsp;5 – Jinonice</p>
+            <p>Areál školy (Smíchov)<br>Preslova 72/25<br>150&nbsp;00 Praha&nbsp;5 – Smíchov</p>
           </div>
         </div>
       </div>
@@ -304,8 +321,8 @@
         <span class="nav__logo nav__logo--footer"><img src="img/small_logo.png" alt="" width="28" height="28"></span>
         <span>Kryt Radlice</span>
       </div>
-      <p>Projekt studentů SSPŠ a G · Kryt Radlice © 2026</p>
-      <p class="footer__small">verze 2.0 · Vytvořil student 3.C — jeden z mála na SSPŠ, co opravdu umí dělat weby</p>
+      <p>Projekt studentů SSPŠ a&nbsp;G · Kryt Radlice © 2026</p>
+      <p class="footer__small">verze 2.0 · Vytvořil student 3.&nbsp;C – jeden z&nbsp;mála na SSPŠ, co opravdu umí dělat weby</p>
     </div>
   </footer>
 
@@ -315,7 +332,7 @@
     <button class="lightbox__arrow lightbox__arrow--prev" id="lbPrev" type="button" aria-label="Předchozí fotografie">‹</button>
     <figure class="lightbox__figure">
       <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" id="lbImg">
-      <figcaption><span id="lbCaption"></span> <span class="lightbox__counter" id="lbCounter"></span></figcaption>
+      <figcaption aria-live="polite"><span id="lbCaption"></span> <span class="lightbox__counter" id="lbCounter"></span></figcaption>
     </figure>
     <button class="lightbox__arrow lightbox__arrow--next" id="lbNext" type="button" aria-label="Další fotografie">›</button>
   </div>

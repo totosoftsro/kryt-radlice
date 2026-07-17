@@ -10,7 +10,6 @@
   function setMenu(open) {
     navLinks.classList.toggle('is-open', open);
     burger.setAttribute('aria-expanded', String(open));
-    burger.setAttribute('aria-label', open ? 'Zavřít menu' : 'Otevřít menu');
   }
 
   if (burger && navLinks) {
@@ -42,14 +41,15 @@
   const lbNext = $('lbNext');
   const items = [...document.querySelectorAll('.gallery figure')];
 
-  if (!lightbox || !lbImg || items.length === 0) return;
+  if (!lightbox || !lbImg || !lbCaption || !lbCounter
+    || !lbClose || !lbPrev || !lbNext || items.length === 0) return;
 
   let current = 0;
   let lastFocused = null;
 
   const fullSrc = (figure) => {
-    const img = figure.querySelector('img');
-    return img.dataset.full || img.src;
+    const link = figure.querySelector('a');
+    return link ? link.href : figure.querySelector('img').src;
   };
 
   function preload(index) {
@@ -60,21 +60,23 @@
   function show(index) {
     current = (index + items.length) % items.length;
     const caption = items[current].querySelector('figcaption');
-    const captionText = caption ? caption.textContent : '';
     lbImg.src = fullSrc(items[current]);
-    lbImg.alt = captionText;
-    lbCaption.textContent = captionText;
+    lbCaption.textContent = caption ? caption.textContent : '';
     lbCounter.textContent = `· ${current + 1} / ${items.length}`;
     preload(current + 1);
     preload(current - 1);
   }
 
   function openLightbox(index) {
+    if (lightbox.classList.contains('is-open')) return;
     lastFocused = document.activeElement;
     show(index);
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
+    // zámek scrollu s kompenzací šířky scrollbaru, aby obsah neuskočil
+    const scrollbar = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = 'hidden';
+    if (scrollbar > 0) document.body.style.paddingRight = `${scrollbar}px`;
     lbClose.focus();
   }
 
@@ -82,20 +84,16 @@
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
     if (lastFocused) lastFocused.focus();
   }
 
   items.forEach((item, i) => {
-    const caption = item.querySelector('figcaption');
-    item.setAttribute('tabindex', '0');
-    item.setAttribute('role', 'button');
-    item.setAttribute('aria-label', `Zvětšit fotografii: ${caption ? caption.textContent : ''}`);
-    item.addEventListener('click', () => openLightbox(i));
-    item.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openLightbox(i);
-      }
+    const link = item.querySelector('a');
+    if (!link) return;
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(i);
     });
   });
   lbClose.addEventListener('click', closeLightbox);
@@ -111,11 +109,14 @@
     else if (e.key === 'ArrowLeft') show(current - 1);
     else if (e.key === 'ArrowRight') show(current + 1);
     else if (e.key === 'Tab') {
-      // fokus drž uvnitř dialogu
+      // fokus drž uvnitř dialogu — i když spadl na body (klik do fotky)
       const focusable = [lbClose, lbPrev, lbNext];
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
+      if (!focusable.includes(document.activeElement)) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && document.activeElement === first) {
         e.preventDefault();
         last.focus();
       } else if (!e.shiftKey && document.activeElement === last) {
