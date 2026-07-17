@@ -7,14 +7,20 @@ redesign původního krytradlice.cz ve vizuálním stylu ssps.cz.
 
 ```
 index.html          stránka (jediná)
+404.html            chybová stránka pro GitHub Pages (samostatná, bez závislostí)
 css/style.css       styly — design tokeny nahoře v :root
 js/main.js          mobilní menu + lightbox galerie (vanilla JS, bez závislostí)
 fonts/              TT Polls (nadpisy) a Mona Sans (text), woff2
-img/background.jpg  hero fotografie
-img/gallery/        fotografie galerie v plném rozlišení (1600 px, pro lightbox)
-img/gallery/thumbs/ náhledy do mřížky galerie (800 px)
+img/background.webp hero fotografie (background-800.webp pro mobil,
+                    background.jpg jen pro og:image)
+img/gallery/        fotografie galerie v plném rozlišení (1600 px WebP, pro lightbox)
+img/gallery/thumbs/ náhledy do mřížky galerie (800 px WebP)
 docs/               návštěvnický řád (PDF)
+robots.txt          + sitemap.xml
 ```
+
+Nasazeno na GitHub Pages: https://totosoftsro.github.io/kryt-radlice/
+(větev `main`, kořen — push na `main` web automaticky přenasadí)
 
 ## Lokální spuštění
 

@@ -6,27 +6,62 @@
   <title>Kryt Radlice — Výstava v aktivním krytu civilní ochrany</title>
   <meta name="description" content="Studentský projekt zpřístupňující veřejnosti aktivní kryt civilní ochrany v Praze 5 – Jinonicích. Prohlídky zdarma, výstava dozimetrů, ochranných obleků a polních telefonů.">
   <meta name="theme-color" content="#0D0F26">
+  <link rel="canonical" href="https://totosoftsro.github.io/kryt-radlice/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
+  <meta property="og:url" content="https://totosoftsro.github.io/kryt-radlice/">
   <meta property="og:title" content="Kryt Radlice — Výstava v aktivním krytu civilní ochrany">
   <meta property="og:description" content="Sestupte do skutečného krytu civilní ochrany. Prohlídky zdarma, výstava předmětů ochrany obyvatelstva. Praha 5 – Jinonice.">
-  <meta property="og:image" content="img/background.jpg">
+  <meta property="og:image" content="https://totosoftsro.github.io/kryt-radlice/img/background.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="img/small_logo.png">
   <link rel="preload" href="fonts/TTPolls_Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/TTPolls_Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/MonaSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="img/background.webp"
+        imagesrcset="img/background-800.webp 800w, img/background.webp 1600w"
+        imagesizes="(max-width: 980px) 92vw, 44vw">
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExhibitionEvent",
+    "name": "Výstava Kryt Radlice",
+    "description": "Studentský projekt zpřístupňující veřejnosti aktivní kryt civilní ochrany po technické stránce.",
+    "startDate": "2026-06-18T10:00:00+02:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "isAccessibleForFree": true,
+    "location": {
+      "@type": "Place",
+      "name": "Areál SSPŠ a G Jinonice",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Radlická 591/115",
+        "postalCode": "158 00",
+        "addressLocality": "Praha 5 – Jinonice",
+        "addressCountry": "CZ"
+      }
+    },
+    "organizer": {
+      "@type": "EducationalOrganization",
+      "name": "Smíchovská střední průmyslová škola a gymnázium",
+      "url": "https://ssps.cz/"
+    },
+    "url": "https://totosoftsro.github.io/kryt-radlice/"
+  }
+  </script>
 </head>
 <body>
 
-  <a href="#uvod" class="skip-link">Přeskočit na obsah</a>
+  <a href="#obsah" class="skip-link">Přeskočit na obsah</a>
 
   <header class="nav">
     <div class="container nav__inner">
-      <a href="#uvod" class="nav__brand">
+      <a href="#obsah" class="nav__brand">
         <span class="nav__logo"><img src="img/small_logo.png" alt="" width="28" height="28"></span>
         <span class="nav__name">Kryt Radlice</span>
       </a>
@@ -43,7 +78,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="obsah" tabindex="-1">
     <!-- ÚVOD -->
     <section class="hero" id="uvod">
       <div class="container hero__grid">
@@ -61,7 +96,10 @@
           </div>
         </div>
         <div class="hero__media">
-          <img src="img/background.jpg" alt="Otevřený tlakový uzávěr krytu Radlice"
+          <img src="img/background.webp"
+               srcset="img/background-800.webp 800w, img/background.webp 1600w"
+               sizes="(max-width: 980px) 92vw, 44vw"
+               alt="Otevřený tlakový uzávěr krytu Radlice"
                width="1600" height="900" fetchpriority="high">
         </div>
       </div>
@@ -143,18 +181,18 @@
           <p>Kliknutím na fotografii ji zvětšíte.</p>
         </div>
         <div class="gallery">
-          <figure><img src="img/gallery/thumbs/img1.jpg" data-full="img/gallery/img1.jpg" alt="Tlakový uzávěr" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img2.jpg" data-full="img/gallery/img2.jpg" alt="Záložní generátor s alternátorem" width="800" height="533" loading="lazy" decoding="async"><figcaption>Záložní generátor s alternátorem</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img3.jpg" data-full="img/gallery/img3.jpg" alt="Filtry vzduchotechniky" width="800" height="533" loading="lazy" decoding="async"><figcaption>Filtry vzduchotechniky</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img4.jpg" data-full="img/gallery/img4.jpg" alt="Rozvaděč" width="800" height="533" loading="lazy" decoding="async"><figcaption>Rozvaděč</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img5.jpg" data-full="img/gallery/img5.jpg" alt="Kohoutky na užitkovou vodu" width="800" height="533" loading="lazy" decoding="async"><figcaption>Kohoutky na užitkovou vodu</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img6.jpg" data-full="img/gallery/img6.jpg" alt="Technická místnost" width="800" height="533" loading="lazy" decoding="async"><figcaption>Technická místnost</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img7.jpg" data-full="img/gallery/img7.jpg" alt="Záchody" width="800" height="533" loading="lazy" decoding="async"><figcaption>Záchody</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img8.jpg" data-full="img/gallery/img8.jpg" alt="Tlakový uzávěr" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img9.jpg" data-full="img/gallery/img9.jpg" alt="Komunikační zařízení" width="800" height="533" loading="lazy" decoding="async"><figcaption>Komunikační zařízení</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img10.jpg" data-full="img/gallery/img10.jpg" alt="Tlakový uzávěr" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img11.jpg" data-full="img/gallery/img11.jpg" alt="Chodba" width="800" height="533" loading="lazy" decoding="async"><figcaption>Chodba</figcaption></figure>
-          <figure><img src="img/gallery/thumbs/img12.jpg" data-full="img/gallery/img12.jpg" alt="Chodba nouzového východu" width="800" height="533" loading="lazy" decoding="async"><figcaption>Chodba nouzového východu</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img1.webp" data-full="img/gallery/img1.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img2.webp" data-full="img/gallery/img2.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Záložní generátor s alternátorem</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img3.webp" data-full="img/gallery/img3.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Filtry vzduchotechniky</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img4.webp" data-full="img/gallery/img4.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Rozvaděč</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img5.webp" data-full="img/gallery/img5.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Kohoutky na užitkovou vodu</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img6.webp" data-full="img/gallery/img6.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Technická místnost</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img7.webp" data-full="img/gallery/img7.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Záchody</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img8.webp" data-full="img/gallery/img8.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img9.webp" data-full="img/gallery/img9.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Komunikační zařízení</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img10.webp" data-full="img/gallery/img10.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Tlakový uzávěr</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img11.webp" data-full="img/gallery/img11.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Chodba</figcaption></figure>
+          <figure><img src="img/gallery/thumbs/img12.webp" data-full="img/gallery/img12.webp" alt="" width="800" height="533" loading="lazy" decoding="async"><figcaption>Chodba nouzového východu</figcaption></figure>
         </div>
       </div>
     </section>
@@ -276,7 +314,7 @@
     <button class="lightbox__close" id="lbClose" type="button" aria-label="Zavřít náhled">✕</button>
     <button class="lightbox__arrow lightbox__arrow--prev" id="lbPrev" type="button" aria-label="Předchozí fotografie">‹</button>
     <figure class="lightbox__figure">
-      <img src="" alt="" id="lbImg">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" id="lbImg">
       <figcaption><span id="lbCaption"></span> <span class="lightbox__counter" id="lbCounter"></span></figcaption>
     </figure>
     <button class="lightbox__arrow lightbox__arrow--next" id="lbNext" type="button" aria-label="Další fotografie">›</button>

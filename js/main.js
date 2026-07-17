@@ -59,11 +59,11 @@
 
   function show(index) {
     current = (index + items.length) % items.length;
-    const img = items[current].querySelector('img');
     const caption = items[current].querySelector('figcaption');
+    const captionText = caption ? caption.textContent : '';
     lbImg.src = fullSrc(items[current]);
-    lbImg.alt = img.alt;
-    lbCaption.textContent = caption ? caption.textContent : '';
+    lbImg.alt = captionText;
+    lbCaption.textContent = captionText;
     lbCounter.textContent = `· ${current + 1} / ${items.length}`;
     preload(current + 1);
     preload(current - 1);
