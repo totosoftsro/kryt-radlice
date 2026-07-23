@@ -44,7 +44,15 @@ Barvy a typografie vycházejí z design tokenů ssps.cz:
 | `--gold-text`| `#8F6A00` | zlatá pro textové odkazy (kontrast AA)|
 | `--tint`     | `#f6f6f4` | podbarvení střídavých sekcí          |
 
-## Licence fontů
+## Fonty
+
+Fonty jsou **subsetované na latinku + latin-ext** (české znaky, běžná
+interpunkce, `– — … · → °`), aby byly co nejmenší — celá sada 6 řezů má
+~135 kB místo ~281 kB. Pokud do textů přidáš neobvyklý znak (např. `€`,
+azbuku), nemusí být ve fontu — pak je potřeba znovu vygenerovat subset
+z originálů (`python3 -m fontTools.subset` s rozšířeným `--unicodes`).
+
+Licence:
 
 - **Mona Sans** — svobodný font od GitHubu (SIL OFL), soubory z
   [github.com/github/mona-sans](https://github.com/github/mona-sans).

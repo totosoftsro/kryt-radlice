@@ -154,12 +154,14 @@ a:hover { color: var(--navy); }
 /* ---------- Tlačítka a odkazy ---------- */
 .btn {
   display: inline-block;
+  max-width: 100%;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
   padding: 14px 24px;
   border-radius: 3px;
   text-decoration: none;
+  overflow-wrap: anywhere;
   transition: background .2s, color .2s;
 }
 .btn--primary { background: var(--navy); color: var(--white); }
@@ -499,6 +501,7 @@ a:hover { color: var(--navy); }
   font-size: .95rem;
   color: var(--text-muted);
   margin-bottom: 14px;
+  overflow-wrap: anywhere;
 }
 
 /* ---------- Patička ---------- */

@@ -45,10 +45,12 @@
     || !lbClose || !lbPrev || !lbNext || items.length === 0) return;
 
   let current = 0;
-  let lastFocused = null;
+  // sourozenci lightboxu, které při otevření skryjeme čtečce (inert)
+  const backdrop = [...document.body.children].filter((el) => el !== lightbox);
 
+  const linkOf = (figure) => figure.querySelector('a');
   const fullSrc = (figure) => {
-    const link = figure.querySelector('a');
+    const link = linkOf(figure);
     return link ? link.href : figure.querySelector('img').src;
   };
 
@@ -60,8 +62,10 @@
   function show(index) {
     current = (index + items.length) % items.length;
     const caption = items[current].querySelector('figcaption');
+    const captionText = caption ? caption.textContent : '';
     lbImg.src = fullSrc(items[current]);
-    lbCaption.textContent = caption ? caption.textContent : '';
+    lbImg.alt = captionText;
+    lbCaption.textContent = captionText;
     lbCounter.textContent = `· ${current + 1} / ${items.length}`;
     preload(current + 1);
     preload(current - 1);
@@ -69,29 +73,35 @@
 
   function openLightbox(index) {
     if (lightbox.classList.contains('is-open')) return;
-    lastFocused = document.activeElement;
-    show(index);
+    backdrop.forEach((el) => { el.inert = true; });
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
     // zámek scrollu s kompenzací šířky scrollbaru, aby obsah neuskočil
     const scrollbar = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = 'hidden';
     if (scrollbar > 0) document.body.style.paddingRight = `${scrollbar}px`;
+    // až po zviditelnění regionu, aby aria-live popisek první fotky ohlásil
+    show(index);
     lbClose.focus();
   }
 
   function closeLightbox() {
+    const link = linkOf(items[current]);
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
-    if (lastFocused) lastFocused.focus();
+    backdrop.forEach((el) => { el.inert = false; });
+    // fokus zpět na náhled právě prohlížené fotky (spolehlivé i v Safari)
+    if (link) link.focus();
   }
 
   items.forEach((item, i) => {
-    const link = item.querySelector('a');
+    const link = linkOf(item);
     if (!link) return;
     link.addEventListener('click', (e) => {
+      // nech projít modifikátorový / prostřední klik (otevřít plnou fotku v novém panelu)
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
       e.preventDefault();
       openLightbox(i);
     });
